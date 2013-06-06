@@ -1,4 +1,13 @@
 Portrails::Application.routes.draw do
+
+  root :to => 'page#home'
+
+  get '/work',       to: 'page#work',    as: :work 
+  get '/contact',    to: 'page#contact',        as: :contact
+
+  resources :portfolios
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
