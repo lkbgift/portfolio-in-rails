@@ -1,13 +1,11 @@
 <ul class="large-block-grid-2 small-block-grid-1">
   <% @portfolios.reverse_each do |portfolio| %>
     <li>
-      <div>
+      <div class="box-color">
         <img src="<%= portfolio.image %>" alt="<%= portfolio.title %>">
         <h3><%= portfolio.title %></h3>
         <p><%= portfolio.description %></p>
       </div>
     </li>
   <% end %>
-  
-  
 </ul>

@@ -59,7 +59,13 @@ module Portrails
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
 
+    # Add the fonts path
+    config.assets.paths << "#{Rails.root}/app/assets/fonts"
+
+    # Precompile additional assets
+    config.assets.precompile += %w( .svg .eot .woff .ttf ) 
+    
     # Heroku requires this to be false
-config.assets.initialize_on_precompile=false
+    config.assets.initialize_on_precompile=false
   end
 end
