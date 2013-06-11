@@ -11,6 +11,13 @@ class PageController < ApplicationController
     end
   end
 
-  def contact
+  def speaking
+    @talks = Talk.all
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @talks }
+    end
   end
+
 end

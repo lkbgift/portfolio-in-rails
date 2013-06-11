@@ -1,9 +1,14 @@
 Portrails::Application.routes.draw do
 
+  resources :talks
+
+
   root               to: 'page#home'
   get '/work',       to: 'page#work',           as: :work 
+  get '/speaking',   to: 'page#speaking',          as: :speaking 
   get '/contact',    to: 'page#contact',        as: :contact
   resources          :portfolios
+  resources          :talks
 
 
   # The priority is based upon order of creation:

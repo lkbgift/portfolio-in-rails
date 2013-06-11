@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @talk.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @talk.description %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= @talk.date %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @talk.location %>
+</p>
+
+<p>
+  <b>Event:</b>
+  <%= @talk.event %>
+</p>
+
+<p>
+  <b>Length:</b>
+  <%= @talk.length %>
+</p>
+
+
+<%= link_to 'Edit', edit_talk_path(@talk) %> |
+<%= link_to 'Back', talks_path %>

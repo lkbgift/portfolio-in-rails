@@ -1,0 +1,12 @@
+<ul class="large-block-grid-1 small-block-grid-1">
+  <% @talks.reverse_each do |talk| %>
+    <li>
+      <div class="box-color">
+        <h3><%= talk.title %> </h3>
+        <p class="d-inline mb0"><%= talk.event %>, <%= talk.location %>, <%= talk.length %></p>
+        <p class="d-inline"><%= talk.description %></p>
+      </div>
+    </li>
+  <% end %>
+</ul>
+
