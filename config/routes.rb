@@ -6,7 +6,6 @@ Portrails::Application.routes.draw do
   root               to: 'page#home'
   get '/work',       to: 'page#work',           as: :work 
   get '/speaking',   to: 'page#speaking',          as: :speaking 
-  get '/contact',    to: 'page#contact',        as: :contact
   resources          :portfolios
   resources          :talks
 
