@@ -20,4 +20,13 @@ class PageController < ApplicationController
     end
   end
 
+  def press
+    @presses = Press.all
+
+    respond_to do |format|
+      format.html
+      format.json { redner json: @presses }
+    end
+  end
+  
 end

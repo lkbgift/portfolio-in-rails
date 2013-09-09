@@ -1,0 +1,26 @@
+<div class="" id="consulting" data-magellan-destination="consulting">
+  <div class="row">
+    <div class="large-12 column text-center">
+      <div class="hero independent text-center">
+        <h2 style="">I've been showcased for my design and approach to web development.</h2>
+        <a href="mailto:lkbgift@gmail.com" class="button success radius small">Get in touch project</a>
+      </div>
+  </div>
+</div>
+
+<ul class="large-block-grid-1 small-block-grid-1 press">
+  <div class="box-color">
+    <% @presses.reverse_each do |press| %>
+      <a href="<%= press.presslink %>">
+        <div class="large-3 small-12 columns">
+          <img src="<%= press.url %>" alt="<%= press.title %>">
+        </div>
+        <div class="large-9 small-12 columns">
+          <h3><%= press.title %></h3>
+          <p><%= press.description %></p>
+        </div>
+      </a>
+    <% end %>
+    <hr>
+  </div>
+</ul>

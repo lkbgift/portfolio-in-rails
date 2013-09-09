@@ -12,3 +12,20 @@
  *= require_tree .
  *= require foundation_and_overrides
  */
+
+.box-color{
+  li{
+    list-style: none;
+  }
+}
+
+.press{
+  .box-color{
+    img{
+      display: inline-block;
+    }
+    h3{
+      display: inline- block;
+    }
+  }
+}
