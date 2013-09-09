@@ -9,8 +9,8 @@
 </div>
 
 <ul class="large-block-grid-1 small-block-grid-1 press">
-  <div class="box-color large-5 large-centered columns">
-    <% @presses.reverse_each do |press| %>
+  <% @presses.reverse_each do |press| %>
+    <div class="box-color large-5 large-centered columns">
         <a href="<%= press.presslink %>">
         <div class="row">
           <div class="large-12 columns">
@@ -27,6 +27,6 @@
           </div>
         </a>
       </div>
-    <% end %>
-  </div>
+    </div>
+  <% end %>
 </ul>
