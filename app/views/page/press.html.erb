@@ -9,14 +9,14 @@
 </div>
 
 <ul class="large-block-grid-1 small-block-grid-1 press">
-  <div class="box-color large-8 large-centered">
+  <div class="box-color large-7 large-centered columns">
     <% @presses.reverse_each do |press| %>
       <div class="row">
         <a href="<%= press.presslink %>">
-          <div class="large-2 small-12 columns">
+          <div class="large-3 small-12 columns">
             <img src="<%= press.url %>" alt="<%= press.title %>">
           </div>
-          <div class="large-10 small-12 columns">
+          <div class="large-9 small-12 columns">
             <h3><%= press.title %></h3>
             <p><%= press.description %></p>
           </div>
