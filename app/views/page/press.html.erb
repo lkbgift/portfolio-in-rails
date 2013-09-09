@@ -13,10 +13,10 @@
     <% @presses.reverse_each do |press| %>
       <div class="row">
         <a href="<%= press.presslink %>">
-          <div class="large-4 small-12 columns">
+          <div class="large-3 push-1 small-12 columns">
             <img src="<%= press.url %>" alt="<%= press.title %>">
           </div>
-          <div class="large-8 small-12 columns">
+          <div class="large-7 pull-1 small-12 columns">
             <h3><%= press.title %></h3>
             <p><%= press.description %></p>
           </div>
