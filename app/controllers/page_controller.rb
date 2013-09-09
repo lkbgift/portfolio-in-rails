@@ -25,7 +25,7 @@ class PageController < ApplicationController
 
     respond_to do |format|
       format.html
-      format.json { redner json: @presses }
+      format.json { render json: @presses }
     end
   end
   
