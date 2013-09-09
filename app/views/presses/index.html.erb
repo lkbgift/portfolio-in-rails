@@ -2,6 +2,7 @@
 
 <table>
   <tr>
+    <th>Screenshot</th>
     <th>Link</th>
     <th>Image</th>
     <th>Title</th>
@@ -12,6 +13,7 @@
 
 <% @presses.each do |press| %>
   <tr>
+    <td><%= press.screenshot %></td>
     <td><%= press.presslink %></td>
     <td><%= press.url %></td>
     <td><%= press.title %></td>
