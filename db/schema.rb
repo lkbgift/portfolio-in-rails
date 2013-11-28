@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130909123619) do
+ActiveRecord::Schema.define(:version => 20131128172109) do
 
   create_table "pages", :force => true do |t|
     t.string   "title"
@@ -26,6 +26,8 @@ ActiveRecord::Schema.define(:version => 20130909123619) do
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
     t.string   "description"
+    t.string   "gifurl"
+    t.boolean  "hasgif"
   end
 
   create_table "presses", :force => true do |t|
@@ -34,6 +36,7 @@ ActiveRecord::Schema.define(:version => 20130909123619) do
     t.string   "url"
     t.string   "title"
     t.string   "description"
+    t.string   "link"
     t.string   "presslink"
     t.string   "screenshot"
   end

@@ -4,6 +4,9 @@
   <tr>
     <th>Image</th>
     <th>Title</th>
+    <th>Description</th>
+    <th>Gif Url</th>
+    <th>Has Gif</th>
     <th></th>
     <th></th>
     <th></th>
@@ -14,6 +17,8 @@
     <td><%= portfolio.image %></td>
     <td><%= portfolio.title %></td>
     <td><%= portfolio.description %></td>
+    <td><%= portfolio.gifurl %></td>
+    <td><%= portfolio.hasgif %></td>
     <td><%= link_to 'Show', portfolio %></td>
     <td><%= link_to 'Edit', edit_portfolio_path(portfolio) %></td>
     <td><%= link_to 'Destroy', portfolio, method: :delete, data: { confirm: 'Are you sure?' } %></td>
