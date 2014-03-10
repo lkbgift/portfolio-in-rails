@@ -16,3 +16,23 @@
 //= require_tree .
 
 $(document).foundation();
+
+if($('consulting').hasClass('isup')){
+  (function($){
+    $.getJSON('http://www.rememberlenny.com/portfolios.json', function(data){
+      var items = [];
+      var item;
+      $.each( data, function( i, item){
+        item = '<li id="' + i + '"><img src="'+item.image+'"><h3>'+item.title+'</h3><p>'+item.description+'</p></li>';
+        items.push(item);
+        if(i > 5){
+          setTimeout(function(){
+            $('#porfolio-contain').append(item);
+          }, 800);
+        } else {
+            $('#porfolio-contain').append(item);
+        }
+      });
+    });
+  })(jQuery);
+}

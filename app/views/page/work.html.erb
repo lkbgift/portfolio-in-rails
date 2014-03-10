@@ -1,4 +1,4 @@
-<div class="" id="consulting" data-magellan-destination="consulting">
+<div class="isup" id="consulting" data-magellan-destination="consulting">
   <div class="row">
     <div class="large-12 column text-center">
       <div class="hero independent text-center">
@@ -11,24 +11,3 @@
 <ul id="porfolio-contain" class="large-block-grid-2 small-block-grid-1">
 
 </ul>
-
-<script>
-  (function($){
-    $.getJSON('http://www.rememberlenny.com/portfolios.json', function(data){
-      var items = [];
-      var item;
-      $.each( data, function( i, item){
-        item = '<li id="' + i + '"><img src="'+item.image+'"><h3>'+item.title+'</h3><p>'+item.description+'</p></li>';
-        items.push(item);
-        if(i > 5){
-          setTimeout(function(){
-            $('#porfolio-contain').append(item);
-          }, 800);
-        } else {
-            $('#porfolio-contain').append(item);
-        }
-      });
-    });
-  })(jQuery);
-
-</script>
