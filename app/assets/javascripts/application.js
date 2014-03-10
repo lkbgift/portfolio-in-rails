@@ -17,7 +17,7 @@
 
 $(document).foundation();
 
-if($('consulting').hasClass('isup')){
+if($('#consulting').hasClass('isup')){
   (function($){
     $.getJSON('http://www.rememberlenny.com/portfolios.json', function(data){
       var items = [];
@@ -28,7 +28,7 @@ if($('consulting').hasClass('isup')){
         if(i > 5){
           setTimeout(function(){
             $('#porfolio-contain').append(item);
-          }, 800);
+          }, 2000);
         } else {
             $('#porfolio-contain').append(item);
         }
