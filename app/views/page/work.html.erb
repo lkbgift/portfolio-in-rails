@@ -8,14 +8,31 @@
   </div>
 </div>
 
-<ul class="large-block-grid-2 small-block-grid-1">
-  <% @portfolios.reverse_each do |portfolio| %>
-    <li class="<%= portfolio.hasgif ? 'hasgif' : '' %>">
-      <div class="box-color">
-        <img src="<%= portfolio.image %>" alt="<%= portfolio.title %>">
-        <h3><%= portfolio.title %></h3>
-        <p><%= portfolio.description %></p>
-      </div>
-    </li>
-  <% end %>
+<ul id="porfolio-contain" class="large-block-grid-2 small-block-grid-1">
+
 </ul>
+
+<script>
+  (function($){
+    $.getJSON('http://www.rememberlenny.com/portfolios.json', function(data){
+      var items = [];
+      var item;
+      $.each( data, function( i, item){
+        item = '<li id="' + i + '"><img src="'+item.image+'"><h3>'+item.title+'</h3><p>'+item.description+'</p></li>';
+        items.push(item);
+        if(i > 5){
+          setTimeout(function(){
+            $('#porfolio-contain').append(item);
+          }, 250);
+        } else {
+            $('#porfolio-contain').append(item);
+        }
+      });
+    });
+  })(jQuery)
+
+  function fillTemplate(){
+
+  }
+
+</script>
