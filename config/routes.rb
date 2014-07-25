@@ -1,5 +1,8 @@
 Portrails::Application.routes.draw do
 
+  resources :answers
+
+
   resources :presses
 
 
