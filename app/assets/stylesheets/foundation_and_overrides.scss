@@ -1112,7 +1112,7 @@ h1, h2{
     img{
       width: 30%;
     }
-  }   
+  }
 }
 .orange-back{
   background: #19B352 !important;
@@ -1180,22 +1180,22 @@ span.desktop-highlight {
   margin-top:10% !important;
   margin-bottom:10% !important;
 }
-.hero{ 
+.hero{
     -webkit-user-select: none;  /* Chrome all / Safari all */
   -moz-user-select: none;     /* Firefox all */
   -ms-user-select: none;      /* IE 10+ */
 
   /* No support for these yet, use at own risk */
   -o-user-select: none;
-  user-select: none;    
+  user-select: none;
   h1{
     margin-left: 0em;
-    font-size: 7em;
-    margin-bottom: 0em;
+    font-size: 4em;
+    margin-bottom: 20px;
+    margin-top:20px;
     padding: .2em .3em .1em;
     line-height: 1em;
     display: inline-block;
-    margin-top:7%;
   }
   h3{
     font-family: 'pf_din_text_comp_pro_lightRg', "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !important;
@@ -1242,7 +1242,7 @@ span.desktop-highlight {
       width:80%;
     }
   }
-  .Backend{ 
+  .Backend{
     .meter{
       width:60%;
     }
@@ -1256,7 +1256,7 @@ span.desktop-highlight {
     .meter{
       width:100%;
     }
-  }  
+  }
 }
 
 .top-nav{
@@ -1268,7 +1268,7 @@ span.desktop-highlight {
 .nav a{
     font-family: 'pf_din_text_comp_pro_lightRg',  "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
-    font-size: 1.5em; 
+    font-size: 1.5em;
     text-decoration: none; }
 .nav li{ list-style: none; display: inline-block; padding-right: .5em;}
 blockquote p{ border-left: 1px dashed #999;
@@ -1327,7 +1327,7 @@ h3{
   }
 }
 
-.education{ 
+.education{
 
 }
 div.arrow-right {

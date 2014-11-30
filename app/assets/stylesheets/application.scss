@@ -13,6 +13,15 @@
  *= require foundation_and_overrides
  */
 
+.top-nav-block{
+  margin-bottom: 3.5em;
+}
+
+img.logo-image{
+  max-width: 105px;
+  border-radius: 10px;
+}
+
 .box-color{
   li{
     list-style: none;
