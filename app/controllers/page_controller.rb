@@ -2,7 +2,7 @@ class PageController < ApplicationController
   def home
   end
 
-  def creative
+  def create
     @creatives = Creative.all
     respond_to do |format|
       format.html # index.html.erb

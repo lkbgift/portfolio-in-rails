@@ -34,3 +34,12 @@ $('#seeWork').on('click', function(){
     });
   });
 });
+
+$(function(){
+  $('.loading').removeClass('loading');
+  $('#masonary-context').masonry({
+    columnWidth: '.item',
+    gutter: 20,
+    itemSelector: '.item'
+  })
+});

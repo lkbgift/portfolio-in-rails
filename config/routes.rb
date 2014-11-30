@@ -7,7 +7,7 @@ Portrails::Application.routes.draw do
 
 
   root               to: 'page#home'
-  get '/creative',   to: 'page#creative',       as: :creative
+  get '/create',     to: 'page#create',         as: :create
   get '/work',       to: 'page#work',           as: :work
   get '/press',      to: 'page#press',          as: :press
   get '/speaking',   to: 'page#speaking',       as: :speaking

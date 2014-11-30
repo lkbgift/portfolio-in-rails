@@ -1,13 +1,12 @@
 <h1>Filler</h1>
-
-<ul class="large-block-grid-1 small-block-grid-1">
+<div id="masonary-context">
   <% @creatives.reverse_each do |creative| %>
-    <li>
+    <div class="item">
       <div class="box-color">
         <h3><%= creative.title %> </h3>
         <p class="d-inline mb0"><%= creative.image %>, <%= creative.url %></p>
         <p class="d-inline"><%= creative.description %></p>
       </div>
-    </li>
+    </div>
   <% end %>
-</ul>
+</div>
