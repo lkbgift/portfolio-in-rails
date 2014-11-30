@@ -1,11 +1,8 @@
 Portrails::Application.routes.draw do
 
+  resources :creatives
   resources :answers
-
-
   resources :presses
-
-
   resources :talks
 
 

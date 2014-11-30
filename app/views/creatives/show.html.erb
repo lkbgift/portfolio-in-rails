@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @creative.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @creative.description %>
+</p>
+
+<p>
+  <b>Image:</b>
+  <%= @creative.image %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%= @creative.url %>
+</p>
+
+
+<%= link_to 'Edit', edit_creative_path(@creative) %> |
+<%= link_to 'Back', creatives_path %>
