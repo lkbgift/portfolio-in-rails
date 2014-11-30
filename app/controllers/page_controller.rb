@@ -3,12 +3,11 @@ class PageController < ApplicationController
   end
 
   def work
-    @portfolios = Portfolio.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @portfolios }
-    end
+    # @portfolios = Portfolio.all
+    # respond_to do |format|
+    #   format.html # index.html.erb
+    #   format.json { render json: @portfolios }
+    # end
   end
 
   def speaking
@@ -28,5 +27,5 @@ class PageController < ApplicationController
       format.json { render json: @presses }
     end
   end
-  
+
 end

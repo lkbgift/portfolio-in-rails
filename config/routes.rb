@@ -10,9 +10,10 @@ Portrails::Application.routes.draw do
 
 
   root               to: 'page#home'
-  get '/work',       to: 'page#work',           as: :work 
-  get '/press',      to: 'page#press',          as: :press 
-  get '/speaking',   to: 'page#speaking',       as: :speaking 
+  get '/creative',   to: 'page#creative',       as: :creative
+  get '/work',       to: 'page#work',           as: :work
+  get '/press',      to: 'page#press',          as: :press
+  get '/speaking',   to: 'page#speaking',       as: :speaking
   resources          :portfolios
   resources          :talks
 
