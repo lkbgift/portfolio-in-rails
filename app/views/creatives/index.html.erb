@@ -1,29 +1,15 @@
-<h1>Listing creatives</h1>
-
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Description</th>
-    <th>Image</th>
-    <th>Url</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @creatives.each do |creative| %>
-  <tr>
-    <td><%= creative.title %></td>
-    <td><%= creative.description %></td>
-    <td><%= creative.image %></td>
-    <td><%= creative.url %></td>
-    <td><%= link_to 'Show', creative %></td>
-    <td><%= link_to 'Edit', edit_creative_path(creative) %></td>
-    <td><%= link_to 'Destroy', creative, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Creative', new_creative_path %>
+<div id="masonary-context">
+  <% @creatives.reverse_each do |creative| %>
+    <div class="item">
+      <div class="box-color">
+        <%= link_to creative do %>
+          <%= image_tag creative.image %>
+        <% end %>
+        <div class="text-overlay column">
+          <h3><%= creative.title %> </h3>
+          <p class="d-inline"><%= creative.description %></p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
