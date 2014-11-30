@@ -13,6 +13,15 @@ group :production do
   gem 'pg'
 end
 
+# Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+gem 'spring',        group: :development
+
+group :development, :test do
+  gem 'spork-rails', '4.0.0'
+  # gem 'pg'
+  gem 'childprocess', '0.3.6'
+end
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

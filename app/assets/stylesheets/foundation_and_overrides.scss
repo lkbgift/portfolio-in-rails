@@ -1067,9 +1067,7 @@ body{
 .inline-block{
   display:inline-block;
 }
-.no-list-style{
-  list-style:none;
-}
+
 h1, h2{
   text-transform: uppercase;
 }
@@ -1180,6 +1178,11 @@ span.desktop-highlight {
   margin-top:10% !important;
   margin-bottom:10% !important;
 }
+
+h2.logo{
+  margin-top: 0em;
+}
+
 .hero{
     -webkit-user-select: none;  /* Chrome all / Safari all */
   -moz-user-select: none;     /* Firefox all */
@@ -1188,11 +1191,12 @@ span.desktop-highlight {
   /* No support for these yet, use at own risk */
   -o-user-select: none;
   user-select: none;
+
   h1{
     margin-left: 0em;
     font-size: 4em;
-    margin-bottom: 20px;
-    margin-top:20px;
+    margin-bottom: 40px;
+    margin-top:30px;
     padding: .2em .3em .1em;
     line-height: 1em;
     display: inline-block;
@@ -1407,4 +1411,12 @@ body{
 .semi-independent{
   margin-top: 10%;
   margin-bottom: 10%;
+}
+
+.no-list-style{
+  list-style:none;
+  li a{
+    font-size: 19px;
+    font-family: 'pf_din_text_comp_pro_lightRg', Helvetica;
+  }
 }
