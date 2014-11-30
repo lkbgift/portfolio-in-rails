@@ -10,20 +10,17 @@
   <%= render 'layouts/head' %>
 
   <body id="page">
-
     <div class="large-12">
-
       <%= render 'layouts/headdisplay' %>
-
-      <section class="content large-9 medium-9 column large-push-3">
+    </div>
+    <div class="row"></div>
+    <div class="large-12">
+      <section class="content large-9 medium-9 column large-push-3 medium-push-3">
         <%= yield %>
       </section><!--close content-->
-
       <%= render 'layouts/sidebar' %>
-
       <%= render 'layouts/footer' %>
     </div>
-
     <%= javascript_include_tag "application" %>
   </body>
 </html>
