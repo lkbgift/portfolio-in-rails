@@ -13,6 +13,38 @@
  *= require foundation_and_overrides
  */
 
+.item{
+  transition: 250ms all;
+  max-width: 200px;
+}
+
+.box-color{
+  .text-overlay{
+    transform: translateY(100%);
+    transition: 250ms all;
+    h3{
+      font-size: 16px;
+    }
+    p{
+      font-size: 13px;
+    }
+  }
+  &:hover{
+    .text-overlay{
+      transform: translateY(0%);
+    }
+  }
+}
+
+.text-overlay{
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  background: rgba(255, 255, 255, 0.6);
+  left: 0;
+  right: 0;
+}
+
 .top-nav-block{
   margin-bottom: 3.5em;
 }
@@ -23,6 +55,8 @@ img.logo-image{
 }
 
 .box-color{
+  position: relative;
+  overflow: hidden;
   li{
     list-style: none;
   }

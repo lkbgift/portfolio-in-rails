@@ -3,9 +3,13 @@
   <% @creatives.reverse_each do |creative| %>
     <div class="item">
       <div class="box-color">
-        <h3><%= creative.title %> </h3>
-        <p class="d-inline mb0"><%= creative.image %>, <%= creative.url %></p>
-        <p class="d-inline"><%= creative.description %></p>
+        <%= link_to creative.url do %>
+          <%= image_tag creative.image %>
+        <% end %>
+        <div class="text-overlay column">
+          <h3><%= creative.title %> </h3>
+          <p class="d-inline"><%= creative.description %></p>
+        </div>
       </div>
     </div>
   <% end %>
