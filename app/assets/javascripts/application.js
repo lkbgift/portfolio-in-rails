@@ -35,11 +35,18 @@ $('#seeWork').on('click', function(){
   });
 });
 
-$(function(){
-  $('.loading').removeClass('loading');
-  $('#masonary-context').masonry({
-    columnWidth: '.item',
-    gutter: 20,
-    itemSelector: '.item'
-  })
+$(document).on('page:load', function(){
+   $('#page').waitForImages(function(){
+    finished: function() {
+      var $container;
+      $container = $('#masonary-context');
+      $container.imagesLoaded(function() {
+       return $container.masonry({
+      columnWidth: '.item',
+      gutter: 20,
+      itemSelector: '.item'
+     });
+   },
+   waitForAll: true
+ });
 });
