@@ -2,32 +2,12 @@
 
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Image:</b>
-  <%= @portfolio.image %>
-</p>
+<%= image_tag @portfolio.image %>
 
-<p>
-  <b>Title:</b>
+<h1>
   <%= @portfolio.title %>
-</p>
+</h1>
 
 <p>
-  <b>Description:</b>
   <%= @portfolio.description %>
 </p>
-
-<p>
-  <b>Gif URL:</b>
-  <%= @portfolio.gifurl %>
-</p>
-
-<p>
-  <b>Has Gif:</b>
-  <%= @portfolio.hasgif %>
-</p>
-
-
-
-<%= link_to 'Edit', edit_portfolio_path(@portfolio) %> |
-<%= link_to 'Back', portfolios_path %>
