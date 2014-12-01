@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20141130201410) do
+ActiveRecord::Schema.define(:version => 20141201023914) do
 
   create_table "answers", :force => true do |t|
     t.datetime "created_at", :null => false
@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(:version => 20141130201410) do
     t.string   "description"
     t.string   "gifurl"
     t.boolean  "hasgif"
+    t.datetime "contract"
   end
 
   create_table "presses", :force => true do |t|
