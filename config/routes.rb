@@ -5,15 +5,17 @@ Portrails::Application.routes.draw do
   root                  to: 'page#home'
   get '/creations',     to: 'creatives#index',      as: :creations
   get '/creation/:id',  to: 'creatives#show',       as: :creation
-  get '/work',          to: 'page#work',           as: :work
-  get '/press',         to: 'page#press',          as: :press
-  get '/speaking',      to: 'page#speaking',       as: :speaking
+  get '/works',         to: 'portfolios#index',     as: :works
+  get '/work/:id',      to: 'portfolios#show',      as: :work
+  get '/work',          to: 'page#work',            as: :work
+  get '/press',         to: 'page#press',           as: :press
+  get '/speaking',      to: 'page#speaking',        as: :speaking
 
   resources :creatives
   resources :answers
   resources :presses
   resources :talks
-  resources             :portfolios
+  resources :portfolios
 
 
   # The priority is based upon order of creation:
