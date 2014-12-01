@@ -6,6 +6,7 @@ Portrails::Application.routes.draw do
   get '/creations',     to: 'creatives#index',      as: :creations
   get '/creation/:id',  to: 'creatives#show',       as: :creation
   get '/works',         to: 'portfolios#index',     as: :works
+  match '/work/:id' => 'portfolios#show',     :as => :work
   get '/work/:id',      to: 'portfolios#show',      as: :work
   get '/work',          to: 'page#work',            as: :work
   get '/press',         to: 'page#press',           as: :press

@@ -37,13 +37,13 @@
     </div>
     <div class="large-10 large-pull-2 column">
       <ul class="large-block-grid-2 medium-block-grid-2">
-        <% @portfolios.each do |portfolio| %>
+        <% @portfolios.each do |work| %>
           <li>
             <div class="box-color padded-1">
-              <%= link_to portfolio do %>
-              <%= image_tag portfolio.image %>
-              <%= portfolio.title %>
-              <%= portfolio.description %>
+              <%= link_to work_url() + '/' + work.id.to_s do %>
+              <%= image_tag work.image %>
+              <%= work.title %>
+              <%= work.description %>
               <% end %>
             </div>
           </li>
