@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require waitforimages
 //= require foundation
 //= require_tree .
 
@@ -35,18 +36,12 @@ $('#seeWork').on('click', function(){
   });
 });
 
-$(document).on('page:load', function(){
-   $('#page').waitForImages(function(){
-    finished: function() {
-      var $container;
-      $container = $('#masonary-context');
-      $container.imagesLoaded(function() {
-       return $container.masonry({
-      columnWidth: '.item',
-      gutter: 20,
-      itemSelector: '.item'
-     });
-   },
-   waitForAll: true
- });
+
+
+var $container;
+$container = $('#masonary-context');
+$container.masonry({
+  columnWidth: '.item',
+  gutter: 20,
+  itemSelector: '.item'
 });
