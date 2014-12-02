@@ -45,3 +45,11 @@ $container.masonry({
   gutter: 20,
   itemSelector: '.item'
 });
+
+$(window).on('scroll', function(e){
+  if(window.scrollY > 100){
+    $('a.back-to-top').fadeIn();
+  } else {
+    $('a.back-to-top').fadeOut();
+  }
+})
