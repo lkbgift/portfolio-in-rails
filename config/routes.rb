@@ -11,6 +11,7 @@ Portrails::Application.routes.draw do
   get '/work',          to: 'page#work',            as: :work
   get '/press',         to: 'page#press',           as: :press
   get '/speaking',      to: 'page#speaking',        as: :speaking
+  get '/contact',       to: 'page#contact',        as: :contact
 
   resources :creatives
   resources :answers

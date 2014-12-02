@@ -1,25 +1,6 @@
-
-<div id="contact" data-magellan-destination="contact">
-    <div class="row contactWrapper ">
-      <div id="contactForm" class="contactForm column large-offset-3 large-6 centered small-10 small-offset-1">
-        <h2 class="green-topborder">Moshi Moshi.</h2>
-        <form action="MAILTO:lkbgift@gmail.com" method="post" enctype="text/plain">
-          <label>Your Name</label>
-          <input type="text" name="Name" placeholder="James Brown" data-cip-id="cIPJQ342845639">
-            <div class="row">
-              <div class="large-6 columns">
-                <label>Location</label>
-                <input type="text" name="Location" placeholder="Zurich, Switzerland" data-cip-id="cIPJQ342845640">
-              </div>
-              <div class="large-6 columns">
-                <label>Contact</label>
-                <input type="text" name="Phone" placeholder="(+##)-###-###-####" data-cip-id="cIPJQ342845641">
-              </div>
-            </div>
-            <label></label>
-            <textarea placeholder="Once upon a time..." name="Message"></textarea>
-            <input type="submit" class="large success radius button even large-12" value="Lets Talk.">
-          </form>
-        </div>
-      </div>
-    </div>
+<div class="home-page">
+  <h1 class="margin-pt5mb">Hey! Im Lenny.</h1>
+  <p>I work at <a href="http://condenast.com">Conde Nast</a>, and do awesome stuff on the <a href="http://newyorker.com">New Yorker</a> web team.</p>
+  <p>I like <%= link_to 'side projects', creations_path %> and keep a <a href="http://blog.rememberlenny.com">blog</a>.</p>
+  <p><%= link_to 'Reach out', contact_path, :class => 'button secondary small' %></p>
+</div>
