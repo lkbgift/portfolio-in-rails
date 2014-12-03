@@ -42,8 +42,8 @@
             <div class="box-color padded-1">
               <%= link_to work_url() + '/' + work.id.to_s do %>
               <%= image_tag work.image %>
-              <%= work.title %>
-              <%= work.description %>
+              <h3><%= work.title %></h3>
+              <p><%= work.description %></p>
               <% end %>
             </div>
           </li>
