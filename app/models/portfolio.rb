@@ -2,7 +2,7 @@ class Portfolio < ActiveRecord::Base
   validates :slug, presence: true
   before_validation :ensure_slug_exists
   extend FriendlyId
-  friendly_id :name, use: :slugged
+  friendly_id :slug, use: :slugged
 
   protected
     def ensure_slug_exists
