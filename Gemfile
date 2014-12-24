@@ -1,7 +1,5 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.12'
-
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
@@ -13,6 +11,7 @@ group :production do
   gem 'pg'
 end
 
+gem 'friendly_id'
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
 
