@@ -7,7 +7,8 @@ class Portfolio < ActiveRecord::Base
       if slug.nil?
         title = self.name
         split_title = title.split(' ')
-        self.slug = split_title.join('-')
+        url_slug = split_title.join('-')
+        self.slug = url_slug.downcase
       end
     end
   attr_accessible :date, :description, :image, :role, :title, :gifurl, :hasgif
