@@ -2,7 +2,7 @@
   <% @creatives.reverse_each do |creative| %>
     <div class="item">
       <div class="box-color">
-        <%= link_to creative do %>
+        <%= link_to creative.url do %>
           <%= image_tag creative.image %>
         <% end %>
         <div class="text-overlay column">
