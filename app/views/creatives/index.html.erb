@@ -6,8 +6,10 @@
           <%= image_tag creative.image %>
         <% end %>
         <div class="text-overlay column">
-          <h3><%= creative.title %> </h3>
-          <p class="d-inline"><%= creative.description %></p>
+          <%= link_to creative.url do %>
+            <h3><%= creative.title %> </h3>
+            <p class="d-inline"><%= creative.description %></p>
+          <% end %>
         </div>
       </div>
     </div>
