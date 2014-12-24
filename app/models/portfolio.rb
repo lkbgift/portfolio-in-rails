@@ -13,5 +13,5 @@ class Portfolio < ActiveRecord::Base
         self.slug = url_slug.downcase
       end
     end
-  attr_accessible :date, :description, :image, :role, :title, :gifurl, :hasgif
+  attr_accessible :date, :contract, :description, :image, :role, :title, :gifurl, :hasgif
 end
