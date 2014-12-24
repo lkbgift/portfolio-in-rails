@@ -5,7 +5,7 @@ class Portfolio < ActiveRecord::Base
   protected
     def ensure_slug_exists
       if slug.nil?
-        title = self.name
+        title = self.title
         split_title = title.split(' ')
         url_slug = split_title.join('-')
         self.slug = url_slug.downcase
