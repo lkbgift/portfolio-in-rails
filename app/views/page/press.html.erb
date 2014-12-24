@@ -11,14 +11,14 @@
 <ul class="large-block-grid-2 small-block-grid-1 press">
   <% @presses.reverse_each do |press| %>
     <li>
-      <div class="box-color large-12 large-centered columns">
+      <div class="box-color large-12 large-centered columns padded-1">
           <a href="<%= press.presslink %>">
           <div class="row">
             <div class="large-12 columns">
               <img src="<%= press.screenshot %>" alt="<%= press.title %>">
             </div>
           </div>
-          <div class="row push-1 pull-1">
+          <div class="row">
             <div class="large-3 small-12 columns">
               <img src="<%= press.url %>" alt="<%= press.title %>">
             </div>
