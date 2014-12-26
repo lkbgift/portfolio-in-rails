@@ -2,7 +2,7 @@ class PortfoliosController < ApplicationController
   # GET /portfolios
   # GET /portfolios.json
   def index
-    @portfolios = Portfolio.all.order("contract desc")
+    @portfolios = Portfolio.order("contract desc")
 
     respond_to do |format|
       format.html # index.html.erb
