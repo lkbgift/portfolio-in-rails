@@ -93,16 +93,17 @@
       var typeClassArray = accessed['type'].split(' ');
       var typeClass = typeClassArray.join('');
       var template =        '<div class="row"><div class="create-item text-left type-' + typeClass.toLowerCase() + '">';
-      template = template + ' <div class="large-3 column"><a target="_blank" href="' + accessed['url'] + '"><img src="' + accessed['image'] + '"></a></div>';
-      template = template + '   <div class="large-7 column">';
-      template = template + '     <a target="_blank" href="' + accessed['url'] + '">';
-      template = template + '       <h2>' + accessed['title'] + '</h2>';
-      template = template + '     </a>';
-      template = template + '     <label' + accessed['type'] + '</label>';
-      template = template + '     <p>' + accessed['description'] + '</p>';
-      template = template + '   </div>';
-      template = template + '   <div class="large-2 column"></div>';
+      template = template + ' <div class="large-3 medium-6 medium-centered column">';
+      template = template + '   <a target="_blank" href="' + accessed['url'] + '"><img src="' + accessed['image'] + '"></a>';
       template = template + ' </div>';
+      template = template + ' <div class="large-7 column">';
+      template = template + '   <a target="_blank" href="' + accessed['url'] + '">';
+      template = template + '     <h2>' + accessed['title'] + '</h2>';
+      template = template + '   </a>';
+      template = template + '   <label' + accessed['type'] + '</label>';
+      template = template + '   <p>' + accessed['description'] + '</p>';
+      template = template + ' </div>';
+      template = template + ' <div class="large-2 column"></div>';
       template = template + '</div>';
       content.push(template);
     }
