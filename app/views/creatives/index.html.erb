@@ -1,6 +1,6 @@
-<div id="masonary-context">
+<ul class="large-block-grid-3 medium-block-grid-2 small-block-grid-1">
   <% @creatives.reverse_each do |creative| %>
-    <div class="item">
+    <li class="item">
       <div class="box-color">
         <%= link_to creative.url do %>
           <%= image_tag creative.image %>
@@ -12,6 +12,6 @@
           <% end %>
         </div>
       </div>
-    </div>
+    </li>
   <% end %>
-</div>
+</ul>
