@@ -1,17 +1,58 @@
-<ul class="large-block-grid-4 medium-block-grid-3 small-block-grid-1">
-  <% @creatives.reverse_each do |creative| %>
-    <li class="item">
-      <div class="box-color">
-        <%= link_to creative.url do %>
-          <%= image_tag creative.image %>
-        <% end %>
-        <div class="text-overlay column">
-          <%= link_to creative.url do %>
-            <h3><%= creative.title %> </h3>
-            <p class="d-inline"><%= creative.description %></p>
-          <% end %>
-        </div>
+  <script src="http://hackingjournalism.com/js/tabletop.js"></script>
+
+  <section id="team" class="container light-container content-section text-center
+  ">
+    <div class="row">
+      <div class="col-lg-12 bios">
+        <ul id="profile_container" class="large-block-grid-4 medium-block-grid-3 small-block-grid-2">
+        </ul>
       </div>
-    </li>
-  <% end %>
-</ul>
+    </div>
+  </section>
+
+  <!-- Core JavaScript Files -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script type="text/javascript">
+
+  var public_spreadsheet_url = 'https://docs.google.com/spreadsheet/pub?hl=en_US&hl=en_US&key=1MeNqxdApmPj9IUA2qTYZWe3fSwD48Qy8RhMV-h3qmfw&output=html';
+
+  function init() {
+    Tabletop.init( { key: public_spreadsheet_url,
+                     callback: showInfo,
+                     simpleSheet: true } )
+  }
+
+  function showInfo(data, tabletop) {
+    window.tableTopData = data;
+    console.log(data);
+    processTableTopData(data);
+  }
+
+  function processTableTopData(data){
+    var content = [];
+    for(i=0;i<data.length;i++){
+      var accessed = data[i];
+      var template =        '';
+      template = template + '<img src="' + accessed['image'] + '">';
+      template = template + '<h2>' + accessed['title'] + '</h2>';
+      template = template + '<h3>' + accessed['type'] + '</h3>';
+      template = template + '<div class="bio-links"><a class="btn btn-info btn-sm" target="_blank" href="' + accessed['url'] + '">Link</a></div>';
+      template = template + '<p>' + accessed['description'] + '</p>';
+      content.push(template);
+    }
+    renderData(content);
+  }
+
+  function renderData(content){
+    for(i = 0; i < content.length; i++){
+      var isDiv = document.createElement('li');
+      isDiv.innerHTML = content[i];
+      document.querySelector('#profile_container').appendChild( isDiv );
+    }
+  }
+
+  (function($){
+    $(document).ready(function(){init()});
+  })(jQuery);
+
+  </script>
