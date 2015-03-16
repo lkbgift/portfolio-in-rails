@@ -1,12 +1,11 @@
 <%= simple_form_for(@creative) do |f| %>
-  <%= render 'partials/error_messages', object: f.object %>
 
   <div><%= f.input :title %></div>
   <div><%= f.input :description %></div>
   <div><%= f.input :image %></div>
   <div><%= f.input :url %></div>
-  <div><%= f.input :date_start, :label => 'When did it start?' %></div>
-  <div><%= f.input :date_end, :label => 'When did it end?' %></div>
+  <div><%= f.input :date_started, :label => 'When did it start?' %></div>
+  <div><%= f.input :date_ended, :label => 'When did it end?' %></div>
 
   <%= f.submit "Save", class: "button success save-button large-12" %>
 <% end %>

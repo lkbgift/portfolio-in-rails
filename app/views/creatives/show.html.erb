@@ -23,6 +23,16 @@
   <%= @creative.url %>
 </p>
 
+<p>
+  <b>Date Started:</b>
+  <%= @creative.date_started %>
+</p>
+
+<p>
+  <b>Date Ended:</b>
+  <%= @creative.date_ended %>
+</p>
+
 
 <%= link_to 'Edit', edit_creative_path(@creative) %> |
 <%= link_to 'Back', creatives_path %>
