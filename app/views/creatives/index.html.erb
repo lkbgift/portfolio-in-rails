@@ -1,5 +1,37 @@
   <script src="http://hackingjournalism.com/js/tabletop.js"></script>
 
+  <style>
+    #team.type-sideproject .create-item:not(.type-sideproject){
+      display: none;
+    }
+    #team.type-opensource .create-item:not(.type-opensource){
+      display: none;
+    }
+    #team.type-prototype .create-item:not(.type-prototype){
+      display: none;
+    }
+    #team.type-teaching .create-item:not(.type-teaching){
+      display: none;
+    }
+    #team.type-contract .create-item:not(.type-contract){
+      display: none;
+    }
+    #team.type-one-off .create-item:not(.type-one-off){
+      display: none;
+    }
+  </style>
+
+  <dl class="sub-nav filtering-container">
+    <dt>Filter:</dt>
+    <dd class="active"><a href="#">All</a></dd>
+    <dd><a data-target="type-sideproject" href="#">Side Project</a></dd>
+    <dd><a data-target="type-opensource" href="#">Open Source</a></dd>
+    <dd><a data-target="type-prototype" href="#">Prototype</a></dd>
+    <dd><a data-target="type-teaching" href="#">Teaching</a></dd>
+    <dd><a data-target="type-contract" href="#">Contract</a></dd>
+    <dd><a data-target="type-one-off" href="#">One-off</a></dd>
+  </dl>
+
   <section id="team" class="container light-container content-section text-center
   ">
     <div class="row">
@@ -12,6 +44,22 @@
 
   <!-- Core JavaScript Files -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+  <script>
+    $('.filtering-container dd a:not(.active)').on('click', function(e){
+      e.preventDefault();
+      $('.filtering-container dd.active').removeClass('active');
+      $( this ).parent().addClass('active');
+      var target = $( this ).data('target');
+      updateClass(target);
+    });
+
+    var updateClass = function(target){
+      $('#team').removeClass('type-sideproject type-one-off type-prototype type-teaching type-contract type-opensource');
+      $('#team').addClass(target);
+    }
+  </script>
+
   <script type="text/javascript">
 
   var public_spreadsheet_url = 'https://docs.google.com/spreadsheet/pub?hl=en_US&hl=en_US&key=1MeNqxdApmPj9IUA2qTYZWe3fSwD48Qy8RhMV-h3qmfw&output=html';
@@ -34,13 +82,13 @@
       var accessed = data[i];
       var typeClassArray = accessed['type'].split(' ');
       var typeClass = typeClassArray.join('');
-      var template =        '<div class="type-' + typeClass.toLowerCase() + '">';
-      template = template + '<img src="' + accessed['image'] + '">';
-      template = template + '<h2>' + accessed['title'] + '</h2>';
+      var template =        '<div class="row"><div class="create-item text-left type-' + typeClass.toLowerCase() + '">';
+      template = template + '<div class="large-3 column"><img src="' + accessed['image'] + '"></div>';
+      template = template + '<div class="large-9 column"><h2>' + accessed['title'] + '</h2>';
       template = template + '<h3>' + accessed['type'] + '</h3>';
       template = template + '<div class="bio-links"><a class="btn btn-info btn-sm" target="_blank" href="' + accessed['url'] + '">Link</a></div>';
-      template = template + '<p>' + accessed['description'] + '</p>';
-      template = template + '</div>';
+      template = template + '<p>' + accessed['description'] + '</p></div>';
+      template = template + '</div></div>';
       content.push(template);
     }
     renderData(content);
@@ -48,7 +96,7 @@
 
   function renderData(content){
     for(i = 0; i < content.length; i++){
-      var isDiv = document.createElement('li');
+      var isDiv = document.createElement('div');
       isDiv.innerHTML = content[i];
       document.querySelector('#profile_container').appendChild( isDiv );
     }
