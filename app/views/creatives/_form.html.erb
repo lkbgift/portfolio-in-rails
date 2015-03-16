@@ -1,43 +1,14 @@
-<%= form_for(@creative) do |f| %>
-  <% if @creative.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@creative.errors.count, "error") %> prohibited this creative from being saved:</h2>
+<%= simple_form_for(@creative) do |f| %>
+  <%= render 'partials/error_messages', object: f.object %>
 
-      <ul>
-      <% @creative.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <div><%= f.input :title %></div>
+  <div><%= f.input :description %></div>
+  <div><%= f.input :image %></div>
+  <div><%= f.input :url %></div>
+  <div><%= f.input :date_start, :label => 'When did it start?' %></div>
+  <div><%= f.input :date_end, :label => 'When did it end?' %></div>
 
-  <div class="field">
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_field :description %>
-  </div>
-  <div class="field">
-    <%= f.label :image %><br />
-    <%= f.text_field :image %>
-  </div>
-  <div class="field">
-    <%= f.label :url %><br />
-    <%= f.text_field :url %>
-  </div>
-
-  <div class="field">
-    <%= f.label :date_started %><br />
-    <%= f.text_field :date_started %>
-  </div>
-
-  <div class="field">
-    <%= f.label :date_ended %><br />
-    <%= f.text_field :date_ended %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <%= f.submit "Save", class: "button success save-button large-12" %>
 <% end %>
+
+
