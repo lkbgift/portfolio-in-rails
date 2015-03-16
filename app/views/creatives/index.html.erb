@@ -1,22 +1,28 @@
   <script src="http://hackingjournalism.com/js/tabletop.js"></script>
 
   <style>
-    #team.type-sideproject .create-item:not(.type-sideproject){
+    #team.type-sideproject .create-item:not(.type-sideproject)
+    {
       display: none;
     }
-    #team.type-opensource .create-item:not(.type-opensource){
+    #team.type-opensource .create-item:not(.type-opensource)
+    {
       display: none;
     }
-    #team.type-prototype .create-item:not(.type-prototype){
+    #team.type-prototype .create-item:not(.type-prototype)
+    {
       display: none;
     }
-    #team.type-teaching .create-item:not(.type-teaching){
+    #team.type-teaching .create-item:not(.type-teaching)
+    {
       display: none;
     }
-    #team.type-contract .create-item:not(.type-contract){
+    #team.type-contract .create-item:not(.type-contract)
+    {
       display: none;
     }
-    #team.type-one-off .create-item:not(.type-one-off){
+    #team.type-one-off .create-item:not(.type-one-off)
+    {
       display: none;
     }
     ul#profile_container .this-is:after {
@@ -31,7 +37,7 @@
     }
     @media only screen and (min-width: 40.063em) and (min-width: 64.063em){
       .medium-6 {
-        width: 50%!important;
+        width: 50% !important;
         margin: 0 auto;
       }
     }
@@ -98,7 +104,7 @@
       var accessed = data[i];
       var typeClassArray = accessed['type'].split(' ');
       var typeClass = typeClassArray.join('');
-      var template =        '<div class="row this-is"><div class="create-item text-left type-' + typeClass.toLowerCase() + '">';
+      var template =        '<div class="row"><div class="create-item text-left type-' + typeClass.toLowerCase() + '">';
       template = template + ' <div class="large-3 medium-6 medium-centered column">';
       template = template + '   <a target="_blank" href="' + accessed['url'] + '"><img src="' + accessed['image'] + '"></a>';
       template = template + ' </div>';
@@ -110,6 +116,7 @@
       template = template + '   <p>' + accessed['description'] + '</p>';
       template = template + ' </div>';
       template = template + ' <div class="large-2 column"></div>';
+      template = template + ' <div class="row this-is"></div>';
       template = template + '</div>';
       content.push(template);
     }
