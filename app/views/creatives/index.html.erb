@@ -85,7 +85,7 @@
       var template =        '<div class="row"><div class="create-item text-left type-' + typeClass.toLowerCase() + '">';
       template = template + '<div class="large-3 column"><a target="_blank" href="' + accessed['url'] + '"><img src="' + accessed['image'] + '"></a></div>';
       template = template + '<div class="large-9 column"><a target="_blank" href="' + accessed['url'] + '"><h2>' + accessed['title'] + '</a></h2>';
-      template = template + '<h3>' + accessed['type'] + '</h3>';
+      template = template + '<label' + accessed['type'] + '</label>';
       template = template + '<p>' + accessed['description'] + '</p></div>';
       template = template + '</div></div>';
       content.push(template);
