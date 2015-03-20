@@ -28,7 +28,7 @@ class PageController < ApplicationController
   end
 
   def press
-    @presses = Press.all
+    @presses = Press.all.reverse
 
     respond_to do |format|
       format.html
