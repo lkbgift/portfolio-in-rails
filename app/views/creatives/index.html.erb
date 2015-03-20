@@ -1,40 +1,30 @@
   <script src="http://hackingjournalism.com/js/tabletop.js"></script>
 
   <style>
-    #team.type-sideproject .create-item:not(.type-sideproject)
-    {
+    #team.type-sideproject .create-item:not(.type-sideproject),
+    #team.type-opensource .create-item:not(.type-opensource),
+    #team.type-prototype .create-item:not(.type-prototype),
+    #team.type-teaching .create-item:not(.type-teaching),
+    #team.type-contract .create-item:not(.type-contract),
+    #team.type-one-off .create-item:not(.type-one-off){
       display: none;
     }
-    #team.type-opensource .create-item:not(.type-opensource)
-    {
-      display: none;
+    .color-type-sideproject,
+    .color-type-opensource,
+    .color-type-prototype,
+    .color-type-teaching,
+    .color-type-contract,
+    .color-type-one-off{
+      border-left-width: 20px;
+      border-left-style: solid;
     }
-    #team.type-prototype .create-item:not(.type-prototype)
-    {
-      display: none;
-    }
-    #team.type-teaching .create-item:not(.type-teaching)
-    {
-      display: none;
-    }
-    #team.type-contract .create-item:not(.type-contract)
-    {
-      display: none;
-    }
-    #team.type-one-off .create-item:not(.type-one-off)
-    {
-      display: none;
-    }
-    ul#profile_container .this-is:after {
-      content: '';
-      display: block;
-      width: 60%;
-      margin-bottom: 20px;
-      padding-bottom: 20px;
-      border-bottom: 1px solid rgb(238, 238, 238);
-      margin-left: auto;
-      margin-right: auto;
-    }
+    .color-type-sideproject{ border-color: hsla(127, 93%, 52%, 0.7); }
+    .color-type-opensource{ border-color: hsla(346, 78%, 50%, 0.7); }
+    .color-type-prototype{ border-color: hsla(267, 93%, 52%, 0.7); }
+    .color-type-teaching{ border-color: hsla(447, 93%, 52%, 0.7); }
+    .color-type-contract{ border-color: hsla(627, 93%, 52%, 0.7); }
+    .color-type-one-off{ border-color: hsla(707, 93%, 52%, 0.7); }
+
     @media only screen and (min-width: 40.063em) and (min-width: 64.063em){
       .medium-6 {
         width: 50% !important;
@@ -104,10 +94,10 @@
       var accessed = data[i];
       var typeClassArray = accessed['type'].split(' ');
       var typeClass = typeClassArray.join('');
-      var template =        '<div class="row">'
+      var template =        '<div class="row color-type-' + typeClass.toLowerCase() + '">'
       template = template + ' <div class="create-item text-left type-' + typeClass.toLowerCase() + '">';
-      template = template + '   <div class="large-3 medium-6 medium-centered column">';
-      template = template + '     <a target="_blank" href="' + accessed['url'] + '"><img src="' + accessed['image'] + '"></a>';
+      template = template + '   <div class="large-3 medium-6 medium-centered column" style="max-width: 150px; overflow: hidden; float: left;">';
+      template = template + '     <a target="_blank" href="' + accessed['url'] + '"  style="max-height: 150px; overflow: hidden;" ><img style="min-height: 100%;" src="' + accessed['image'] + '"></a>';
       template = template + '   </div>';
       template = template + '   <div class="large-7 column">';
       template = template + '     <a target="_blank" href="' + accessed['url'] + '">';
