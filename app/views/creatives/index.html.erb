@@ -96,9 +96,9 @@
       var typeClassArray = accessed['type'].split(' ');
       var typeClass = typeClassArray.join('');
       var template =        '<div class="row color-type-' + typeClass.toLowerCase() + '">'
-      template = template + ' <div class="create-item text-center type-' + typeClass.toLowerCase() + '">';
-      template = template + '   <div class="large-3 medium-6 text-center medium-centered column" style="float: left;">';
-      template = template + '     <a target="_blank" href="' + accessed['url'] + '"  style="height: 150px; width: 150px; background-image: url(' + accessed['image'] + '); background-postion: center; display: inline-block; background-size:cover; ></a>';
+      template = template + ' <div class="create-item text-left type-' + typeClass.toLowerCase() + '">';
+      template = template + '   <div class="large-3 medium-6 medium-centered column" style="float: left;">';
+      template = template + '     <a target="_blank" href="' + accessed['url'] + '"  style="height: 150px; width: 150px; background-image: url(' + accessed['image'] + '); background-postion: center; display: block; background-size:cover; ></a>';
       template = template + '   </div>';
       template = template + '   <div class="large-7 column">';
       template = template + '     <a target="_blank" href="' + accessed['url'] + '">';
