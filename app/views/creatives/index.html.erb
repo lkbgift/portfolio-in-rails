@@ -17,6 +17,7 @@
     .color-type-one-off{
       border-left-width: 20px;
       border-left-style: solid;
+      margin-bottom: 10px;
     }
     .color-type-sideproject{ border-color: hsla(127, 93%, 52%, 0.7); }
     .color-type-opensource{ border-color: hsla(346, 78%, 50%, 0.7); }
@@ -95,9 +96,9 @@
       var typeClassArray = accessed['type'].split(' ');
       var typeClass = typeClassArray.join('');
       var template =        '<div class="row color-type-' + typeClass.toLowerCase() + '">'
-      template = template + ' <div class="create-item text-left type-' + typeClass.toLowerCase() + '">';
-      template = template + '   <div class="large-3 medium-6 medium-centered column" style="max-width: 150px; overflow: hidden; float: left;">';
-      template = template + '     <a target="_blank" href="' + accessed['url'] + '"  style="max-height: 150px; overflow: hidden;" ><img style="min-height: 100%;" src="' + accessed['image'] + '"></a>';
+      template = template + ' <div class="create-item text-center type-' + typeClass.toLowerCase() + '">';
+      template = template + '   <div class="large-3 medium-6 text-center medium-centered column" style="float: left;">';
+      template = template + '     <a target="_blank" href="' + accessed['url'] + '"  style="height: 150px; width: 150px; background-image: url(' + accessed['image'] + '); background-postion: center; display: inline-block; background-size:cover; ></a>';
       template = template + '   </div>';
       template = template + '   <div class="large-7 column">';
       template = template + '     <a target="_blank" href="' + accessed['url'] + '">';
