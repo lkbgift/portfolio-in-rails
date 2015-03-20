@@ -9,22 +9,22 @@
     #team.type-one-off .create-item:not(.type-one-off){
       display: none;
     }
-    .color-type-sideproject,
-    .color-type-opensource,
-    .color-type-prototype,
-    .color-type-teaching,
-    .color-type-contract,
-    .color-type-one-off{
-      border-left-width: 20px;
-      border-left-style: solid;
+    .color-type-sideproject .content-box,
+    .color-type-opensource .content-box,
+    .color-type-prototype .content-box,
+    .color-type-teaching .content-box,
+    .color-type-contract .content-box,
+    .color-type-one-off .content-box{
+      border-top-width: 20px;
+      border-top-style: solid;
       margin-bottom: 10px;
     }
-    .color-type-sideproject{ border-color: hsla(127, 93%, 52%, 0.7); }
-    .color-type-opensource{ border-color: hsla(346, 78%, 50%, 0.7); }
-    .color-type-prototype{ border-color: hsla(267, 93%, 52%, 0.7); }
-    .color-type-teaching{ border-color: hsla(447, 93%, 52%, 0.7); }
-    .color-type-contract{ border-color: hsla(627, 93%, 52%, 0.7); }
-    .color-type-one-off{ border-color: hsla(707, 93%, 52%, 0.7); }
+    .color-type-sideproject .content-box{  border-color: hsla(127, 93%, 52%, 0.7); }
+    .color-type-opensource .content-box { border-color: hsla(346, 78%, 50%, 0.7); }
+    .color-type-prototype .content-box { border-color: hsla(267, 93%, 52%, 0.7); }
+    .color-type-teaching .content-box { border-color: hsla(447, 93%, 52%, 0.7); }
+    .color-type-contract .content-box { border-color: hsla(627, 93%, 52%, 0.7); }
+    .color-type-one-off .content-box { border-color: hsla(707, 93%, 52%, 0.7); }
 
     @media only screen and (min-width: 40.063em) and (min-width: 64.063em){
       .medium-6 {
@@ -97,7 +97,7 @@
       var typeClass = typeClassArray.join('');
       var template =        '<div class="row color-type-' + typeClass.toLowerCase() + '">'
       template = template + ' <div class="create-item text-left type-' + typeClass.toLowerCase() + '">';
-      template = template + '   <div class="large-3 medium-6 medium-centered column" style="float: left;">';
+      template = template + '   <div class="content-box large-3 medium-6 medium-centered column" style="float: left;">';
       template = template + '     <a target="_blank" href="' + accessed['url'] + '"  style="height: 150px; width: 150px; background-image: url(' + accessed['image'] + '); background-postion: center; display: block; background-size:cover; ></a>';
       template = template + '   </div>';
       template = template + '   <div class="large-7 column">';
