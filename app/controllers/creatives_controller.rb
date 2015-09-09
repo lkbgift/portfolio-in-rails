@@ -11,7 +11,7 @@ class CreativesController < ApplicationController
   end
 
   def download
-
+    Creative.upload
     render :json 'Success'
   end
 
