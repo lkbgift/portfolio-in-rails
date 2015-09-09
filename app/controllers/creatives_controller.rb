@@ -10,6 +10,11 @@ class CreativesController < ApplicationController
     end
   end
 
+  def download
+
+    render :json 'Success'
+  end
+
   # GET /creatives/1
   # GET /creatives/1.json
   def show
